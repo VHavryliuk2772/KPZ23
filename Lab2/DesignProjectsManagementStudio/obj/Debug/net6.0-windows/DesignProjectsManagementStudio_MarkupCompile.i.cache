@@ -1,0 +1,20 @@
+﻿DesignProjectsManagementStudio
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Проекти\Sharaga 3.1\КПЗ\Lab2\DesignProjectsManagementStudio\obj\Debug\net6.0-windows\
+DesignProjectsManagementStudio
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+C:\Проекти\Sharaga 3.1\КПЗ\Lab2\DesignProjectsManagementStudio\App.xaml
+51280392772
+
+23-1819850654
+221346372566
+Views\EmployeeUserControl.xaml;Views\MainWindow.xaml;Views\ProjectUserControl.xaml;Views\SettingsUserControl.xaml;Views\TasksUserControl.xaml;
+
+True
+

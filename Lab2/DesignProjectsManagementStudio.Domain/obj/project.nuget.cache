@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "BWcwqlRvkOzTWKMN9E3guECZbZ9XMdrDCg1UdQj4D0NVr9P9QuIU0eDhFeNN33Lu1mWaJhiFBVSCWw8HOgKRHg==",
+  "success": true,
+  "projectFilePath": "C:\\Проекти\\Sharaga 3.1\\КПЗ\\Lab2\\DesignProjectsManagementStudio.Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Користувач\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\Користувач\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

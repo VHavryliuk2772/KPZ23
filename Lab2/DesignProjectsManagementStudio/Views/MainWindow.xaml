@@ -1,0 +1,44 @@
+﻿<Window xmlns:Views="clr-namespace:DesignProjectsManagementStudio.Views"  x:Class="DesignProjectsManagementStudio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesignProjectsManagementStudio" xmlns:Converter="clr-namespace:DesignProjectsManagementStudio.Converters"
+        mc:Ignorable="d"
+        Title="Lab2-3" Height="450" Width="800" ResizeMode="NoResize">
+    <Window.Resources>
+        <Converter:VisibleConverter x:Key="my:VisibleConverter"/>
+    </Window.Resources>
+        
+    <Grid Margin="0,10,0,0" HorizontalAlignment="Left" Width="800">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" UseLayoutRounding="False" HorizontalAlignment="Left" Orientation="Horizontal">
+            <Button Width="48" Command="{Binding SetControlVisibility}" CommandParameter="Projects">
+                <Image Source="C:\Проекти\Sharaga 3.1\КПЗ\Lab2\DesignProjectsManagementStudio\Images\Projects\2.png" Width="48" Height="48"/>
+            </Button>
+            <Button Width="48" Command="{Binding SetControlVisibility}" CommandParameter="Employees">
+                <Image Source="C:\Проекти\Sharaga 3.1\КПЗ\Lab2\DesignProjectsManagementStudio\Images\Projects\1.png" Width="48" Height="48"/>
+            </Button>
+            <Button Width="48" Command="{Binding SetControlVisibility}" CommandParameter="Settings">
+                <Image Source="C:\Проекти\Sharaga 3.1\КПЗ\Lab2\DesignProjectsManagementStudio\Images\Projects\5.png" Width="48" Height="48"/>
+            </Button>
+            <Button Width="48" Command="{Binding SetControlVisibility}" CommandParameter="DesignTasks">
+                <Image Source="C:\Проекти\Sharaga 3.1\КПЗ\Lab2\DesignProjectsManagementStudio\Images\Projects\3.png" Width="48" Height="48"/>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Views:ProjectUserControl x:Name="ProjectsUC" Visibility="{Binding Path=VisibleTab, Converter = {StaticResource my:VisibleConverter},
+                ConverterParameter=Projects}"/>
+            <Views:EmployeeUserControl x:Name="EmployeeUC" Visibility ="{Binding Path=VisibleTab, Converter = {StaticResource my:VisibleConverter},
+                ConverterParameter=Employees}"/>
+            <Views:SettingsUserControl x:Name="SettingsUC" Visibility ="{Binding Path=VisibleTab, Converter = {StaticResource my:VisibleConverter},
+                ConverterParameter=Settings}"/>
+            <Views:TasksUserControl x:Name="TasksUC" Visibility ="{Binding Path=VisibleTab, Converter = {StaticResource my:VisibleConverter},
+                ConverterParameter=DesignTasks}"/>
+        </StackPanel>
+    </Grid>
+</Window>
